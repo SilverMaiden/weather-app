@@ -16,14 +16,9 @@ class Home extends Component {
                                 Enter a City and State
                             </p>
                         </div>
-                        <div className='item'>
-                            <SearchBar />
-                        </div>
-                        <div className='item'>
-                            <div className='button'>
-                                <SearchButton />
-                            </div>
-                        </div>
+                        <SearchBar
+                            direction = 'column'
+                        />
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ body {
     font-weight: lighter;
     font-size: 50px;
     text-align: center;
-    padding-top: 200px;
+    padding-top: 250px;
 }
 
 .container {
@@ -20,6 +20,7 @@ body {
 
 .item {
     align-self: center;
+    padding: 5px;
 }
 
 .column{
@@ -39,7 +40,7 @@ body {
 }
 
 .button {
-    padding: 10px 0;
+    margin-top: 100px ;
 }
 
 #nav {
@@ -84,4 +85,6 @@ li {
 
 h1 {
     color: #FFFFFF;
+    padding-left: 10px;
 }
+

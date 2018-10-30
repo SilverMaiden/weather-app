@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../App.css';
 import { SearchInput, Button } from 'evergreen-ui';
 import SearchButton from './SearchButton';
@@ -24,18 +25,16 @@ class SearchBar extends Component {
         });
     }
     handleSubmit(event) {
+        alert('a location was submitted: ' + this.state.searchinput);
         event.preventDefault();
-
-        this.props.onSubmit(
-            this.props.id,
-            this.state.searchinput
-        );
     }
     render() {
+        var match = this.props.match;
         return (
-            <form className={this.props.direction} onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} className={this.props.direction} >
                 <div className='item'>
                     <SearchInput
+                        id = 'searchinput'
                         type='text'
                         placeholder="St. George, Utah"
                         value={this.state.searchinput}
@@ -44,12 +43,20 @@ class SearchBar extends Component {
                     />
                 </div>
                 <div className='item'>
-                    < SearchButton />
+                    <Link
+                        to={{
+                            pathname: '/forecast',
+                            search:'?' + 'city=' + this.state.searchinput
+                        }}>
+                        < SearchButton
+                            isDisabled={!this.state.searchinput}
+                        />
+                    </Link>
                 </div>
-
             </form>
         )
     }
 }
+
 
 export default SearchBar;

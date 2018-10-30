@@ -7,7 +7,13 @@ class SearchButton extends Component {
     render() {
         return (
             <div>
-                <Button className='button' appearance='primary' intent="success" type='submit'>
+                <Button
+                    className='button'
+                    appearance='primary'
+                    intent="success"
+                    type='submit'
+                    disabled = {this.props.isDisabled}
+                    >
                     Get Weather
                 </Button>
             </div>

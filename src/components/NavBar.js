@@ -3,9 +3,6 @@ import SearchBar from './Search/SearchBar';
 import SearchButton from './Search/SearchButton';
 import '../App.css';
 
-const barStyle = {
-    className: 'row'
-};
 class NavBar extends Component {
     render() {
         return (
